@@ -21,3 +21,21 @@ utils.isMobile = {
         return (utils.isMobile.Android() || utils.isMobile.BlackBerry() || utils.isMobile.iOS() || utils.isMobile.Opera() || utils.isMobile.Windows());
     }
 };
+
+
+utils.isInViewTop = function(elem) {
+    var docViewTop = window.pageYOffset;
+    var docViewBottom = docViewTop + window.innerHeight;
+    var elemTop = elem.getBoundingClientRect().top + ( window.pageYOffset || document.scrollTop )  - ( document.clientTop  || 0 );
+
+    return ((elemTop <= docViewBottom));
+}
+
+utils.isInOutOfView = function(elem) {
+    var docViewTop = window.pageYOffset;
+    var elemTop = elem.getBoundingClientRect().top + ( window.pageYOffset || document.scrollTop )  - ( document.clientTop  || 0 );
+    var elemBottom = elemTop + elem.offsetHeight;
+
+    return ( (elemTop+elemBottom) <= docViewTop);
+}
+

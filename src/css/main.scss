@@ -30,9 +30,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-    line-height: 1;
+    line-height: 1.4;
     font-family: $font;
-    color: $main-color;
+    color: $second-color;
+    background: $main-color;
 }
 ol, ul {
 	list-style: none;
@@ -60,8 +61,17 @@ img {
     background: $second-color;
     color: $main-color; 
 }
+.w10 {
+    width: 10%;
+}
 .w50 {
     width: 50%;
+}
+.w60 {
+    width: 60%;  
+}
+.w70 {
+    width: 70%;  
 }
 .w80 {
     width: 80%;  
@@ -206,7 +216,11 @@ h4 {
 #moto {
     font-size: 18vw;
     cursor: pointer;
+    position: relative;
+    display: block;
+    z-index: 500;
 }
+
 // STORES //
 .wrapper .content.stores {
     -webkit-justify-content: space-between;
@@ -349,6 +363,34 @@ h4 {
     -webkit-justify-content: unset;
     -ms-flex-pack: unset;
     justify-content: unset; 
+}
+// us //
+.us h4 {
+    font-size: 4.5vw;
+    line-height: 1;
+    margin-bottom: 2vw;
+}
+//SOCIAL 
+#social {
+    padding: 5vw;
+    border: 3px solid #F7C9E7;
+}
+#social h4 {
+    font-size: 4vw;
+}
+#social .icon {
+    max-width: 20%;
+    display: inline-block;
+    margin: 0 2vw;
+}
+
+.footer .content.flex {
+    min-height: auto;
+
+    // -webkit-box-align: unset; 
+    //  -webkit-align-items: unset;
+    // -ms-flex-align: unset;
+    // align-items: unset; 
 }
 // FOOTER //
 .fixed-footer {

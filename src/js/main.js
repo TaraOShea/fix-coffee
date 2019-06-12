@@ -8,6 +8,7 @@ gs.init = function() {
         document.body.className = "mobile";
     } else {
         motoScope.init();
+        socialScope.init();
         gs.slogan(); 
     }
 

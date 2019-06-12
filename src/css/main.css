@@ -26,9 +26,10 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-  line-height: 1;
+  line-height: 1.4;
   font-family: "Lemur-Web", sans-serif;
-  color: #000;
+  color: #FFF;
+  background: #000;
 }
 
 ol, ul {
@@ -64,8 +65,20 @@ img {
   color: #000;
 }
 
+.w10 {
+  width: 10%;
+}
+
 .w50 {
   width: 50%;
+}
+
+.w60 {
+  width: 60%;
+}
+
+.w70 {
+  width: 70%;
 }
 
 .w80 {
@@ -244,6 +257,9 @@ h4 {
 #moto {
   font-size: 18vw;
   cursor: pointer;
+  position: relative;
+  display: block;
+  z-index: 500;
 }
 
 .wrapper .content.stores {
@@ -389,6 +405,31 @@ h4 {
   -webkit-justify-content: unset;
   -ms-flex-pack: unset;
   justify-content: unset;
+}
+
+.us h4 {
+  font-size: 4.5vw;
+  line-height: 1;
+  margin-bottom: 2vw;
+}
+
+#social {
+  padding: 5vw;
+  border: 3px solid #F7C9E7;
+}
+
+#social h4 {
+  font-size: 4vw;
+}
+
+#social .icon {
+  max-width: 20%;
+  display: inline-block;
+  margin: 0 2vw;
+}
+
+.footer .content.flex {
+  min-height: auto;
 }
 
 .fixed-footer {
