@@ -6,10 +6,12 @@ var gs = gs || {};
 gs.init = function() {
     if(utils.isMobile.any()) {
         document.body.className = "mobile";
+        motoScope.init(true);
     } else {
         motoScope.init();
         socialScope.init();
         gs.slogan(); 
+        // fs.init();
     }
 
     //TRIGGER SCROLL EVENT

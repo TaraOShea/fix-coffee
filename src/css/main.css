@@ -69,6 +69,10 @@ img {
   width: 10%;
 }
 
+.w40 {
+  width: 40%;
+}
+
 .w50 {
   width: 50%;
 }
@@ -129,6 +133,10 @@ img {
   margin-bottom: 2%;
 }
 
+.mb8 {
+  margin-bottom: 8%;
+}
+
 .mb10 {
   margin-bottom: 10%;
 }
@@ -137,8 +145,16 @@ img {
   margin-left: 2%;
 }
 
+.ml5 {
+  margin-left: 5%;
+}
+
 .mr2 {
   margin-right: 2%;
+}
+
+.mr5 {
+  margin-right: 5%;
 }
 
 .pt5 {
@@ -173,6 +189,10 @@ img {
   padding-right: 2%;
 }
 
+.pr10 {
+  padding-right: 10%;
+}
+
 .bgb {
   background: #000;
 }
@@ -187,6 +207,10 @@ img {
 
 .tl {
   text-align: left;
+}
+
+.tr {
+  text-align: right;
 }
 
 h3 {
@@ -429,7 +453,16 @@ h4 {
 }
 
 .footer .content.flex {
+  color: #FFF;
   min-height: auto;
+  -webkit-box-align: flex-end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.footer-slogan {
+  font-size: 4vw;
 }
 
 .fixed-footer {

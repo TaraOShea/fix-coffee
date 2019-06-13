@@ -64,6 +64,9 @@ img {
 .w10 {
     width: 10%;
 }
+.w40 {
+    width: 40%;
+}
 .w50 {
     width: 50%;
 }
@@ -109,14 +112,23 @@ img {
 .mb2 {
     margin-bottom: 2%; 
 }
+.mb8 {
+    margin-bottom: 8%;
+}
 .mb10 {
     margin-bottom: 10%;
 }
 .ml2 {
     margin-left: 2%; 
 }
+.ml5 {
+    margin-left: 5%;
+}
 .mr2 {
     margin-right: 2%; 
+}
+.mr5 {
+    margin-right: 5%; 
 }
 .pt5 {
     padding-top: 5%; 
@@ -142,6 +154,9 @@ img {
 .pr2 {
     padding-right: 2%;
 }
+.pr10 {
+    padding-right: 10%;
+}
 .bgb {
     background: $main-color;
 }
@@ -153,6 +168,9 @@ img {
 }
 .tl {
     text-align: left;
+}
+.tr {
+    text-align: right;
 }
 h3 {
     font-size: 7vw;
@@ -385,12 +403,16 @@ h4 {
 }
 
 .footer .content.flex {
+    color: $second-color;
     min-height: auto;
 
-    // -webkit-box-align: unset; 
-    //  -webkit-align-items: unset;
-    // -ms-flex-align: unset;
-    // align-items: unset; 
+    -webkit-box-align: flex-end;
+     -webkit-align-items:flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+}
+.footer-slogan {
+    font-size: 4vw;
 }
 // FOOTER //
 .fixed-footer {
