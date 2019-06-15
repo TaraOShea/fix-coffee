@@ -26,8 +26,9 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-  line-height: 1.4;
-  font-family: "Lemur-Web", sans-serif;
+  line-height: 1.6;
+  font-family: "Work-Sans", sans-serif;
+  font-weight: 300;
   color: #FFF;
   background: #000;
 }
@@ -51,9 +52,21 @@ table {
   border-spacing: 0;
 }
 
+strong {
+  font-weight: 500;
+}
+
 img {
   width: 100%;
   height: auto;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 .relative {
@@ -67,6 +80,10 @@ img {
 
 .w10 {
   width: 10%;
+}
+
+.w14 {
+  width: 14%;
 }
 
 .w40 {
@@ -93,8 +110,16 @@ img {
   width: 90%;
 }
 
+.w100 {
+  width: 100%;
+}
+
 .w105 {
   width: 105%;
+}
+
+.h100 {
+  min-height: 100vh;
 }
 
 .w48 {
@@ -121,8 +146,8 @@ img {
   transform: translateY(-4%);
 }
 
-.tt-10 {
-  transform: translateY(-10%);
+.tt-6 {
+  transform: translateY(-6%);
 }
 
 .mb5 {
@@ -161,8 +186,16 @@ img {
   padding-top: 5%;
 }
 
+.p1 {
+  padding: 1%;
+}
+
 .pt10 {
   padding-top: 10%;
+}
+
+.pb5 {
+  padding-bottom: 5%;
 }
 
 .pb10 {
@@ -197,6 +230,18 @@ img {
   background: #000;
 }
 
+.bgb:after {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  width: 100%;
+  background: #FFF;
+  height: 8%;
+  z-index: 5;
+  display: block;
+}
+
 .z50 {
   z-index: 50;
 }
@@ -215,10 +260,16 @@ img {
 
 h3 {
   font-size: 7vw;
+  font-family: "Lemur-Web", sans-serif;
+  line-height: 1.2;
 }
 
 h4 {
-  font-size: 2vw;
+  font-size: 1.8vw;
+  font-family: "Work-Sans", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.1vw;
 }
 
 .header {
@@ -253,6 +304,10 @@ h4 {
   transform: translateY(-50%);
 }
 
+a, a:visited {
+  border-bottom: 1px solid #000;
+}
+
 .wrapper {
   background: #000;
   color: #FFF;
@@ -269,7 +324,6 @@ h4 {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  min-height: 100vh;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -280,6 +334,7 @@ h4 {
 
 #moto {
   font-size: 18vw;
+  font-family: "Lemur-Web", sans-serif;
   cursor: pointer;
   position: relative;
   display: block;
@@ -299,6 +354,7 @@ h4 {
 
 #slogan {
   font-size: 8vw;
+  font-family: "Lemur-Web", sans-serif;
   line-height: 1.2;
   position: relative;
   cursor: pointer;
@@ -413,10 +469,14 @@ h4 {
 }
 
 .content-block {
-  font-size: 1.8vw;
-  line-height: 1.2;
+  font-size: 1.6vw;
+  line-height: 1.5;
   margin-bottom: 5%;
-  max-width: 56%;
+  max-width: 70%;
+}
+
+.fridge .flex {
+  flex-wrap: wrap;
 }
 
 .wrapper .locations .content.flex {
@@ -432,6 +492,7 @@ h4 {
 }
 
 .us h4 {
+  font-family: "Lemur-Web", sans-serif;
   font-size: 4.5vw;
   line-height: 1;
   margin-bottom: 2vw;
@@ -443,6 +504,7 @@ h4 {
 }
 
 #social h4 {
+  font-family: "Lemur-Web", sans-serif;
   font-size: 4vw;
 }
 
@@ -463,6 +525,8 @@ h4 {
 
 .footer-slogan {
   font-size: 4vw;
+  font-family: "Lemur-Web", sans-serif;
+  line-height: 1.5;
 }
 
 .fixed-footer {
@@ -473,6 +537,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   font-size: 7vw;
+  font-family: "Lemur-Web", sans-serif;
   mix-blend-mode: difference;
   z-index: 100;
 }

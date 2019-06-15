@@ -2,7 +2,7 @@
 $main-color:#000;
 $second-color: #FFF;
 $font: 'Lemur-Web', sans-serif;
-$font-two: 'Permanent Marker', cursive;
+$font-two: 'Work-Sans', sans-serif;
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -30,8 +30,9 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-    line-height: 1.4;
-    font-family: $font;
+    line-height: 1.6;
+    font-family: $font-two;
+    font-weight: 300;
     color: $second-color;
     background: $main-color;
 }
@@ -50,9 +51,18 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+strong {
+    font-weight: 500;
+}
 img {
     width: 100%;
     height: auto;
+}
+p {
+    margin-bottom: 10px;
+}
+p:last-child {
+    margin-bottom: 0;
 }
 .relative {
     position: relative;
@@ -63,6 +73,9 @@ img {
 }
 .w10 {
     width: 10%;
+}
+.w14 {
+    width: 14%;
 }
 .w40 {
     width: 40%;
@@ -82,8 +95,14 @@ img {
 .w90 {
     width: 90%;  
 }
+.w100 {
+    width: 100%;
+}
 .w105 {
     width: 105%;
+}
+.h100 {
+    min-height: 100vh;
 }
 .w48 {
     width: 48%;
@@ -103,8 +122,8 @@ img {
 .tt-4 {
     transform: translateY(-4%); 
 }
-.tt-10 {
-    transform: translateY(-10%); 
+.tt-6 {
+    transform: translateY(-6%); 
 }
 .mb5 {
     margin-bottom: 5%; 
@@ -133,8 +152,14 @@ img {
 .pt5 {
     padding-top: 5%; 
 }
+.p1 {
+    padding: 1%;
+}
 .pt10 {
     padding-top: 10%;
+}
+.pb5 {
+    padding-bottom: 5%;
 }
 .pb10 {
     padding-bottom: 10%;
@@ -160,6 +185,17 @@ img {
 .bgb {
     background: $main-color;
 }
+.bgb:after {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    background: $second-color;
+    height: 8%;
+    z-index: 5;
+    display: block;
+}
 .z50 {
     z-index: 50;
 }
@@ -174,9 +210,15 @@ img {
 }
 h3 {
     font-size: 7vw;
+    font-family: $font;
+    line-height: 1.2;
 }
 h4 {
-    font-size: 2vw;
+    font-size: 1.8vw;
+    font-family: $font-two;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.1vw;
 }
 .header {
     position: fixed;
@@ -206,6 +248,9 @@ h4 {
     top: 40%;
     transform: translateY(-50%);
 }
+a, a:visited {
+    border-bottom: 1px solid $main-color;
+}
 //CONTENT
 .wrapper {
     background: $main-color;
@@ -222,7 +267,6 @@ h4 {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    min-height: 100vh;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -233,6 +277,7 @@ h4 {
 //MOTO
 #moto {
     font-size: 18vw;
+    font-family: $font;
     cursor: pointer;
     position: relative;
     display: block;
@@ -252,6 +297,7 @@ h4 {
 // SLOGAN //
 #slogan {
     font-size: 8vw;
+    font-family: $font;
     line-height: 1.2;
     position: relative;
     cursor: pointer;
@@ -363,10 +409,14 @@ h4 {
     align-items: unset; 
 }
 .content-block {
-    font-size: 1.8vw;
-    line-height: 1.2;
+    font-size: 1.6vw;
+    line-height: 1.5;
     margin-bottom: 5%;
-    max-width: 56%;
+    max-width: 70%;
+}
+// FRIDGE //
+.fridge .flex {
+    flex-wrap: wrap;
 }
 // lOCATIONS //
 .wrapper .locations .content.flex {
@@ -384,6 +434,7 @@ h4 {
 }
 // us //
 .us h4 {
+    font-family: $font;
     font-size: 4.5vw;
     line-height: 1;
     margin-bottom: 2vw;
@@ -394,6 +445,7 @@ h4 {
     border: 3px solid #F7C9E7;
 }
 #social h4 {
+    font-family: $font;
     font-size: 4vw;
 }
 #social .icon {
@@ -413,6 +465,8 @@ h4 {
 }
 .footer-slogan {
     font-size: 4vw;
+    font-family:  $font;
+    line-height: 1.5;
 }
 // FOOTER //
 .fixed-footer {
@@ -424,6 +478,7 @@ h4 {
     justify-content: space-between;
 
     font-size: 7vw;
+    font-family: $font;
     mix-blend-mode: difference;
     z-index: 100;
 }
