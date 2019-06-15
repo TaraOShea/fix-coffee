@@ -471,22 +471,25 @@ a, a:visited {
 // FOOTER //
 .fixed-footer {
     position: fixed;
-    bottom: 0;
+    bottom: 5px;
     width: 100%;
     color: $second-color;
     display: flex;
     justify-content: space-between;
 
     font-size: 7vw;
+    line-height: 1;
     font-family: $font;
     mix-blend-mode: difference;
     z-index: 100;
 }
 .fixed-footer .loc {
     text-align: left;
+    padding-left: 1%;
 }
 .fixed-footer .loc:nth-child(even){
     text-align: right;
+    padding-right: 1%;
 }
 @font-face { 
     font-family: 'Lemur-Web'; 
