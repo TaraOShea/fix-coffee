@@ -35,10 +35,10 @@ motoScope.tiltMoto = function(event) {
 motoScope.changeMotoText = function(autoPlay) {
     if(autoPlay && motoScope.animate){
        setTimeout(function() {
-            motoScope.i = motoScope.loop*20;
+            motoScope.i = motoScope.loop*40;
             motoScope.changeMotoText(true);
             motoScope.loop++;
-       }, 500); 
+       }, 400); 
     }
 
     if(motoScope.i !==0 && motoScope.i % 80 === 0){

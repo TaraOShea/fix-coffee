@@ -11,9 +11,9 @@ gs.init = function() {
         motoScope.init();
         socialScope.init();
         gs.slogan(); 
-        // fs.init();
+        fs.init();
     }
-
+    
     //TRIGGER SCROLL EVENT
     scrollScope.scrollInit();
 }
