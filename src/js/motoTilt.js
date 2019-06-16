@@ -1,19 +1,22 @@
 var motoScope = motoScope || {};
-motoScope.moto = document.getElementById('moto-text');
+motoScope.moto;
 motoScope.motos = ["coffee", "cooffy", "coffey", "coff e", "coffi", "korfi", "koffy", "offee", "co  ee", "co ffe", "off e"];
-
 motoScope.changeText = true;
 motoScope.animate = true;
 motoScope.i = 0;
 motoScope.loop = 0;
 
 motoScope.init = function(loopWords){
-    window.addEventListener("mousemove", motoScope.tiltMoto);
-    window.addEventListener("scroll", motoScope.scroll);
-    motoScope.scroll();
+    motoScope.moto = document.getElementById('moto-text');
 
-    if(loopWords){
-        motoScope.changeMotoText(true);
+    if(motoScope.moto !== null) {
+        window.addEventListener("mousemove", motoScope.tiltMoto);
+        window.addEventListener("scroll", motoScope.scroll);
+        motoScope.scroll();
+
+        if(loopWords){
+            motoScope.changeMotoText(true);
+        }
     }
 }
 //MOTO TILT EVENTS
@@ -38,7 +41,7 @@ motoScope.changeMotoText = function(autoPlay) {
        }, 500); 
     }
 
-    if(motoScope.i !==0 && motoScope.i % 20 === 0){
+    if(motoScope.i !==0 && motoScope.i % 80 === 0){
         motoScope.moto.innerHTML = motoScope.randomElement(motoScope.motos);
     }
     motoScope.i++;

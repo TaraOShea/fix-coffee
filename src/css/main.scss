@@ -71,11 +71,17 @@ p:last-child {
     background: $second-color;
     color: $main-color; 
 }
+.w7 {
+    width: 7%;
+}
 .w10 {
     width: 10%;
 }
 .w14 {
     width: 14%;
+}
+.w25 {
+    width: 25%;
 }
 .w40 {
     width: 40%;
@@ -179,6 +185,9 @@ p:last-child {
 .pr2 {
     padding-right: 2%;
 }
+.pr3 {
+    padding-right: 3%;
+}
 .pr10 {
     padding-right: 10%;
 }
@@ -188,7 +197,7 @@ p:last-child {
 .bgb:after {
     content: '';
     position: absolute;
-    bottom: 0%;
+    bottom: -4%;
     left: 0;
     width: 100%;
     background: $second-color;
@@ -208,6 +217,13 @@ p:last-child {
 .tr {
     text-align: right;
 }
+.tu {
+    text-transform: uppercase;
+}
+.inline {
+    display: inline-block;
+    vertical-align: top;
+}
 h3 {
     font-size: 7vw;
     font-family: $font;
@@ -218,7 +234,6 @@ h4 {
     font-family: $font-two;
     font-weight: 500;
     line-height: 1.6;
-    letter-spacing: 0.08vw;
 }
 .header {
     position: fixed;
@@ -248,8 +263,57 @@ h4 {
     top: 40%;
     transform: translateY(-50%);
 }
-a, a:visited {
-    border-bottom: 1px solid $main-color;
+a {
+	$underline--offset  : 3%;
+	$underline--height  : 6%;
+	color: $second-color;
+	$uo: 100 - $underline--offset;
+	$uh: $uo - $underline--height;
+	background: linear-gradient(
+        to bottom,
+        transparent $uh,
+        $second-color ($uh + 1),
+            $second-color $uo,
+            transparent ($uo + 1)
+    );
+	text-shadow:
+		0.08em .05em $main-color, 0.08em -0.05em $main-color, -0.08em .05em $main-color, -0.08em -0.05em $main-color,
+		0.08em .04em $main-color, 0.08em -0.04em $main-color, -0.08em .04em $main-color, -0.08em -0.04em $main-color,
+		0.08em .03em $main-color, 0.08em -0.03em $main-color, -0.08em .03em $main-color, -0.08em -0.03em $main-color,
+		0.08em .02em $main-color, 0.08em -0.02em $main-color, -0.08em .02em $main-color, -0.08em -0.02em $main-color,
+		0.08em .01em $main-color, 0.08em -0.01em $main-color, -0.08em .01em $main-color, -0.08em -0.01em $main-color,
+		0.08em 0 $main-color, -0.08em 0 $main-color;
+    text-decoration: none;
+    
+    position: relative;
+    text-decoration: none;
+    color: $second-color;
+}
+.invert a {
+	$underline--offset  : 3%;
+	$underline--height  : 6%;
+	color: $main-color;
+	$uo: 100 - $underline--offset;
+	$uh: $uo - $underline--height;
+	background: linear-gradient(
+        to bottom,
+        transparent $uh,
+        $main-color ($uh + 1),
+            $main-color $uo,
+            transparent ($uo + 1)
+    );
+	text-shadow:
+		0.08em .05em $second-color, 0.08em -0.05em $second-color, -0.08em .05em $second-color, -0.08em -0.05em $second-color,
+		0.08em .04em $second-color, 0.08em -0.04em $second-color, -0.08em .04em $second-color, -0.08em -0.04em $second-color,
+		0.08em .03em $second-color, 0.08em -0.03em $second-color, -0.08em .03em $second-color, -0.08em -0.03em $second-color,
+		0.08em .02em $second-color, 0.08em -0.02em $second-color, -0.08em .02em $second-color, -0.08em -0.02em $second-color,
+		0.08em .01em $second-color, 0.08em -0.01em $second-color, -0.08em .01em $second-color, -0.08em -0.01em $second-color,
+		0.08em 0 $second-color, -0.08em 0 $second-color;
+    text-decoration: none;
+    
+    position: relative;
+    text-decoration: none;
+    color: $main-color;
 }
 //CONTENT
 .wrapper {
@@ -401,8 +465,6 @@ a, a:visited {
 
 }
 .coffee-body .content.flex, .us .content.flex {
-    min-height: auto;
-
     -webkit-box-align: unset; 
      -webkit-align-items: unset;
     -ms-flex-align: unset;
@@ -420,8 +482,6 @@ a, a:visited {
 }
 // lOCATIONS //
 .wrapper .locations .content.flex {
-    min-height: auto;
-
     -webkit-box-align: unset; 
      -webkit-align-items: unset;
     -ms-flex-align: unset;
@@ -430,7 +490,18 @@ a, a:visited {
     -webkit-box-pack: unset;
     -webkit-justify-content: unset;
     -ms-flex-pack: unset;
-    justify-content: unset; 
+    justify-content: unset;
+    vertical-align: top;   
+}
+.wrapper .locations .content {
+    font-size: 1.4vw;
+}
+.wrapper .locations .content p {
+    margin: 0;
+}
+.wrapper .locations .content a {
+    background: none;
+    text-shadow: none;
 }
 // us //
 .us h4 {
@@ -443,6 +514,8 @@ a, a:visited {
 #social {
     padding: 5vw;
     border: 3px solid #F7C9E7;
+    position: relative;
+    display: block;
 }
 #social h4 {
     font-family: $font;
@@ -456,8 +529,6 @@ a, a:visited {
 
 .footer .content.flex {
     color: $second-color;
-    min-height: auto;
-
     -webkit-box-align: flex-end;
      -webkit-align-items:flex-end;
     -ms-flex-align: flex-end;

@@ -31,13 +31,26 @@ module.exports = function(grunt) {
             dest: '../dist/css/',
             ext: '.min.css'
           }]
+        }, 
+        wp: {
+          files: [{
+            expand: true,
+            cwd: '../src/css/',
+            src: ['*.css', '!*.min.css'],
+            dest: '../wp/wp-content/themes/fix/assets/css/',
+            ext: '.min.css'
+          }]
         }
       },
       uglify: {
         dist: {
           files: {
-            '../dist/js/main.min.js': ['../src/js/main.js', '../src/js/mailchimp.js'],
-            '../dist/js/apply.min.js': ['../src/js/classie.js','../src/js/apply-mailchimp.js']
+            '../dist/js/main.min.js': ['../src/js/*.js', ],
+          }
+        },
+        wp: {
+          files: {
+            '../wp/wp-content/themes/fix/assets/js/main.min.js': ['../src/js/*.js', ],
           }
         }
       },

@@ -78,12 +78,20 @@ p:last-child {
   color: #000;
 }
 
+.w7 {
+  width: 7%;
+}
+
 .w10 {
   width: 10%;
 }
 
 .w14 {
   width: 14%;
+}
+
+.w25 {
+  width: 25%;
 }
 
 .w40 {
@@ -222,6 +230,10 @@ p:last-child {
   padding-right: 2%;
 }
 
+.pr3 {
+  padding-right: 3%;
+}
+
 .pr10 {
   padding-right: 10%;
 }
@@ -233,7 +245,7 @@ p:last-child {
 .bgb:after {
   content: "";
   position: absolute;
-  bottom: 0%;
+  bottom: -4%;
   left: 0;
   width: 100%;
   background: #FFF;
@@ -258,6 +270,15 @@ p:last-child {
   text-align: right;
 }
 
+.tu {
+  text-transform: uppercase;
+}
+
+.inline {
+  display: inline-block;
+  vertical-align: top;
+}
+
 h3 {
   font-size: 7vw;
   font-family: "Lemur-Web", sans-serif;
@@ -269,7 +290,6 @@ h4 {
   font-family: "Work-Sans", sans-serif;
   font-weight: 500;
   line-height: 1.6;
-  letter-spacing: 0.08vw;
 }
 
 .header {
@@ -304,8 +324,24 @@ h4 {
   transform: translateY(-50%);
 }
 
-a, a:visited {
-  border-bottom: 1px solid #000;
+a {
+  color: #FFF;
+  background: linear-gradient(to bottom, transparent 91%, #FFF 92%, #FFF 97%, transparent 98%);
+  text-shadow: 0.08em 0.05em #000, 0.08em -0.05em #000, -0.08em 0.05em #000, -0.08em -0.05em #000, 0.08em 0.04em #000, 0.08em -0.04em #000, -0.08em 0.04em #000, -0.08em -0.04em #000, 0.08em 0.03em #000, 0.08em -0.03em #000, -0.08em 0.03em #000, -0.08em -0.03em #000, 0.08em 0.02em #000, 0.08em -0.02em #000, -0.08em 0.02em #000, -0.08em -0.02em #000, 0.08em 0.01em #000, 0.08em -0.01em #000, -0.08em 0.01em #000, -0.08em -0.01em #000, 0.08em 0 #000, -0.08em 0 #000;
+  text-decoration: none;
+  position: relative;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.invert a {
+  color: #000;
+  background: linear-gradient(to bottom, transparent 91%, #000 92%, #000 97%, transparent 98%);
+  text-shadow: 0.08em 0.05em #FFF, 0.08em -0.05em #FFF, -0.08em 0.05em #FFF, -0.08em -0.05em #FFF, 0.08em 0.04em #FFF, 0.08em -0.04em #FFF, -0.08em 0.04em #FFF, -0.08em -0.04em #FFF, 0.08em 0.03em #FFF, 0.08em -0.03em #FFF, -0.08em 0.03em #FFF, -0.08em -0.03em #FFF, 0.08em 0.02em #FFF, 0.08em -0.02em #FFF, -0.08em 0.02em #FFF, -0.08em -0.02em #FFF, 0.08em 0.01em #FFF, 0.08em -0.01em #FFF, -0.08em 0.01em #FFF, -0.08em -0.01em #FFF, 0.08em 0 #FFF, -0.08em 0 #FFF;
+  text-decoration: none;
+  position: relative;
+  text-decoration: none;
+  color: #000;
 }
 
 .wrapper {
@@ -461,7 +497,6 @@ a, a:visited {
 }
 
 .coffee-body .content.flex, .us .content.flex {
-  min-height: auto;
   -webkit-box-align: unset;
   -webkit-align-items: unset;
   -ms-flex-align: unset;
@@ -480,7 +515,6 @@ a, a:visited {
 }
 
 .wrapper .locations .content.flex {
-  min-height: auto;
   -webkit-box-align: unset;
   -webkit-align-items: unset;
   -ms-flex-align: unset;
@@ -489,6 +523,20 @@ a, a:visited {
   -webkit-justify-content: unset;
   -ms-flex-pack: unset;
   justify-content: unset;
+  vertical-align: top;
+}
+
+.wrapper .locations .content {
+  font-size: 1.4vw;
+}
+
+.wrapper .locations .content p {
+  margin: 0;
+}
+
+.wrapper .locations .content a {
+  background: none;
+  text-shadow: none;
 }
 
 .us h4 {
@@ -501,6 +549,8 @@ a, a:visited {
 #social {
   padding: 5vw;
   border: 3px solid #F7C9E7;
+  position: relative;
+  display: block;
 }
 
 #social h4 {
@@ -516,7 +566,6 @@ a, a:visited {
 
 .footer .content.flex {
   color: #FFF;
-  min-height: auto;
   -webkit-box-align: flex-end;
   -webkit-align-items: flex-end;
   -ms-flex-align: flex-end;

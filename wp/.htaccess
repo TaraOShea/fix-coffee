@@ -4,7 +4,7 @@
 RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
-RewriteRule ^assets/(.*) /wp-content/themes/sage-6.5.0/assets/$1 [QSA,L]
+RewriteRule ^assets/(.*) /wp-content/themes/fix/assets/$1 [QSA,L]
 RewriteRule ^plugins/(.*) /wp-content/plugins/$1 [QSA,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

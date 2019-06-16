@@ -1,15 +1,18 @@
 var socialScope = socialScope || {};
-socialScope.el = document.getElementById('social')
+socialScope.el;
 socialScope.animate = false;
 
 socialScope.init = function(){
-    window.addEventListener("mousemove", socialScope.tilt);
-    window.addEventListener("scroll", socialScope.scroll);
-    socialScope.scroll();
+    socialScope.el = document.getElementById('social');
+    if(socialScope.el !== null){
+        window.addEventListener("mousemove", socialScope.tilt);
+        window.addEventListener("scroll", socialScope.scroll);
+        socialScope.scroll();
+    }
 }
 
 //MOTO TILT EVENTS
-socialScope.tilt = function(event) {    
+socialScope.tilt = function(event) {     
     if(socialScope.animate) {
         var rotationYValue = 60 * ((event.clientY / window.innerHeight) - 0.5);   
         var rotationXValue = 60 * ((event.clientX / window.innerWidth) - 0.5);
