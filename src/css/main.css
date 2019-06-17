@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,500&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,9 +26,14 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   line-height: 1.6;
-  font-family: "Work-Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 300;
   color: #FFF;
   background: #000;
@@ -128,6 +134,7 @@ p:last-child {
 
 .h100 {
   min-height: 100vh;
+  height: 100%;
 }
 
 .w48 {
@@ -151,10 +158,18 @@ p:last-child {
 }
 
 .tt-4 {
+  -moz-transform: translateY(-4%);
+  -webkit-transform: translateY(-4%);
+  -o-transform: translateY(-4%);
+  -ms-transform: translateY(-4%);
   transform: translateY(-4%);
 }
 
 .tt-6 {
+  -moz-transform: translateY(-6%);
+  -webkit-transform: translateY(-6%);
+  -o-transform: translateY(-6%);
+  -ms-transform: translateY(-6%);
   transform: translateY(-6%);
 }
 
@@ -287,7 +302,7 @@ h3 {
 
 h4 {
   font-size: 1.8vw;
-  font-family: "Work-Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 500;
   line-height: 1.6;
 }
@@ -297,6 +312,10 @@ h4 {
   width: 15%;
   top: 5px;
   left: 50%;
+  -moz-transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%);
   z-index: 500;
 }
@@ -321,6 +340,10 @@ h4 {
 
 .layerd-img.at40 {
   top: 40%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -349,6 +372,8 @@ a {
   color: #FFF;
   min-height: 100vh;
   min-width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .wrapper .content.flex {
@@ -427,6 +452,10 @@ a {
 #slogan-img-1 {
   position: absolute;
   top: 50%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 0;
   width: 80%;
@@ -438,6 +467,10 @@ a {
 #slogan-img-2 {
   position: absolute;
   top: 50%;
+  -moz-transform: translateY(-48%);
+  -webkit-transform: translateY(-48%);
+  -o-transform: translateY(-48%);
+  -ms-transform: translateY(-48%);
   transform: translateY(-48%);
   right: 5%;
   width: 38%;
@@ -449,6 +482,10 @@ a {
 #slogan-img-3 {
   position: absolute;
   top: 50%;
+  -moz-transform: translateY(-20%);
+  -webkit-transform: translateY(-20%);
+  -o-transform: translateY(-20%);
+  -ms-transform: translateY(-20%);
   transform: translateY(-20%);
   left: 3%;
   width: 48%;
@@ -489,6 +526,10 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
+  -moz-transform: translate(-50%, -50%) rotate(-15deg);
+  -webkit-transform: translate(-50%, -50%) rotate(-15deg);
+  -o-transform: translate(-50%, -50%) rotate(-15deg);
+  -ms-transform: translate(-50%, -50%) rotate(-15deg);
   transform: translate(-50%, -50%) rotate(-15deg);
   max-width: 60%;
   text-align: center;
@@ -512,6 +553,11 @@ a {
 
 .fridge .flex {
   flex-wrap: wrap;
+}
+
+.fridge .flex a {
+  background: none;
+  text-shadow: none;
 }
 
 .wrapper .locations .content.flex {
@@ -631,7 +677,7 @@ a {
     font-size: 12vw;
   }
 }
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 640px) {
   .wrapper {
     overflow-x: hidden;
   }
@@ -662,6 +708,7 @@ a {
 
   #slogan .content {
     min-height: 85vw;
+    height: 85%;
   }
 
   #slogan-img-1 {
@@ -679,6 +726,10 @@ a {
     position: absolute;
     top: 50%;
     left: 0%;
+    -moz-transform: translate(-2%, -50%);
+    -webkit-transform: translate(-2%, -50%);
+    -o-transform: translate(-2%, -50%);
+    -ms-transform: translate(-2%, -50%);
     transform: translate(-2%, -50%);
     width: 150%;
   }
@@ -805,7 +856,7 @@ a {
   }
 
   .us.mb10 {
-    margin-bottom: 40%;
+    margin-bottom: 30%;
   }
 
   .us .w50 {
