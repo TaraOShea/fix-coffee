@@ -31,10 +31,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-html, body {
-    height: 100%;
-    width: 100%;
-}
+// html, body {
+//     height: 100%;
+//     width: 100%;
+// }
 body {
     line-height: 1.6;
     font-family: $font-two;
@@ -83,6 +83,9 @@ p:last-child {
 .w10 {
     width: 10%;
 }
+.w12 {
+    width: 12%;
+}
 .w14 {
     width: 14%;
 }
@@ -119,6 +122,9 @@ p:last-child {
 }
 .w48 {
     width: 48%;
+}
+.mauto {
+    margin: 0 auto;
 }
 .mt2 {
     margin-top: 2%;
@@ -158,11 +164,17 @@ p:last-child {
 .mb10 {
     margin-bottom: 10%;
 }
+.ml1 {
+    margin-left: 1%; 
+}
 .ml2 {
     margin-left: 2%; 
 }
 .ml5 {
     margin-left: 5%;
+}
+.mr1 {
+    margin-right: 1%; 
 }
 .mr2 {
     margin-right: 2%; 
@@ -175,6 +187,9 @@ p:last-child {
 }
 .p1 {
     padding: 1%;
+}
+.p2 {
+    padding: 2%;  
 }
 .pt10 {
     padding-top: 10%;
@@ -202,6 +217,12 @@ p:last-child {
 }
 .pr3 {
     padding-right: 3%;
+}
+.pr5 {
+    padding-right: 5%;
+}
+.pr1 {
+    padding-right: 1%;
 }
 .pr10 {
     padding-right: 10%;
@@ -338,6 +359,10 @@ a {
     text-decoration: none;
     color: $main-color;
 }
+.nolink a {
+    text-shadow: none;
+    background: none;
+}
 //CONTENT
 .wrapper {
     background: $main-color;
@@ -365,7 +390,7 @@ a {
 }
 //MOTO
 #moto {
-    font-size: 18vw;
+    font-size: 15vw;
     font-family: $font;
     cursor: pointer;
     position: relative;
@@ -385,7 +410,7 @@ a {
 }
 // SLOGAN //
 #slogan {
-    font-size: 8vw;
+    font-size: 9vw;
     font-family: $font;
     line-height: 1.2;
     position: relative;
@@ -479,7 +504,7 @@ a {
     background-size: contain;
 
     position: absolute;
-    top: 15%;
+    top: 22%;
     left: 2%;
 
     color: #000;
@@ -515,7 +540,7 @@ a {
     font-size: 1.6vw;
     line-height: 1.5;
     margin-bottom: 5%;
-    max-width: 70%;
+    max-width: 80%;
 }
 // FRIDGE //
 .fridge .flex {
@@ -524,6 +549,9 @@ a {
 .fridge .flex a {
     background: none;
     text-shadow: none;
+}
+.fridge .content {
+    max-width: 1400px;
 }
 // lOCATIONS //
 .wrapper .locations .content.flex {
@@ -536,19 +564,19 @@ a {
     -webkit-justify-content: unset;
     -ms-flex-pack: unset;
     justify-content: unset;
-    vertical-align: top;   
+    vertical-align: top;  
+    text-align: left; 
 }
 .wrapper .locations .content {
-    font-size: 1.4vw;
+    font-size: 1.6vw;
 }
 .wrapper .locations .content p {
     margin: 0;
 }
-.wrapper .locations .content a {
-    background: none;
-    text-shadow: none;
-}
 // us //
+.us {
+    font-size: 1.6vw;
+}
 .us h4 {
     font-family: $font;
     font-size: 4.5vw;
@@ -584,6 +612,20 @@ a {
     font-family:  $font;
     line-height: 1.5;
 }
+.site-info-copy-link {
+    position: relative;
+    background: none;
+    text-shadow: none;
+}
+.site-info-copy-link:hover span {
+    background: url('../assets/loader.gif') no-repeat 50% 50%;
+    background-size: contain;
+    height: 50px;
+    right: -3px;
+    position: absolute;
+    top: -50px;
+    width: 100px;
+  }
 // FOOTER //
 .fixed-footer {
     position: fixed;
@@ -619,10 +661,12 @@ a {
     font-weight: normal;
     font-style: normal;
 }
-
 @media only screen and (max-width: 720px) {
+    body, .content-block {
+        line-height: 1.5;
+    }
     .header {
-        width: 21%;
+        width: 25%;
     }
     .wrapper .content.stores {
         min-height: auto;
@@ -630,11 +674,6 @@ a {
     .store:nth-child(even){
         margin-top: 20%;
     }
-    .fixed-footer {
-        font-size: 12vw;
-    }
-}
-@media only screen and (max-width: 640px) { 
     .wrapper {
         overflow-x: hidden;
     }
@@ -646,9 +685,6 @@ a {
     }
     h4 {
         font-size: 6vw;
-    }
-    .header {
-        width: 30%;
     }
     #moto {
         font-size: 24vw;
@@ -704,7 +740,7 @@ a {
         left: -9%;
     }
     .coffe-deal .content {
-        font-size: 4.2vw;
+        font-size: 4vw;
     }
     .coffee-body .content.flex.crrm {
         flex-direction: column-reverse;
@@ -719,6 +755,10 @@ a {
         padding-bottom: 10%;
         padding-top: 10%;
     }
+    .coffee-body .content.flex .mr5, .coffee-body .content.flex .ml5 {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
     .coffee-img {
         padding-left: 20%;
         width: 80%;
@@ -729,8 +769,8 @@ a {
         padding-left: 7%;
         padding-bottom: 10%;
     }
-    .content-block {
-        font-size: 5.5vw;
+    .content-block, .wrapper .locations .content  {
+        font-size: 4.5vw;
     }
     .coffee-body .content.flex {
         transform: none;
@@ -745,6 +785,10 @@ a {
         padding-left: 7%;
         padding-right: 0;
     }
+    .coffee-body .content .mr5,  .coffee-body .content .lr5{
+        margin-right: 0;
+        margin-left: 0;
+    }
     .bgb:after {
         background: none;
     }
@@ -758,8 +802,11 @@ a {
     .layerd-img.w105 {
         width: 100%;
     }
+    .fridge .w12 {
+        width: 28%;
+    }
     .wrapper .locations .content {
-        font-size: 5vw;
+        font-size: 4.5vw;
     }
     .wrapper .locations .pl10 {
         padding-left: 7%;
@@ -771,18 +818,51 @@ a {
     .wrapper .locations .content.flex {
         flex-direction: column;
     }
+    .wrapper .locations .content.flex .loc.content.flex {
+        flex-direction: row-reverse;
+    }
+    .wrapper .locations .content.flex .loc .w7 {
+        width: 12%;
+    }
+    .wrapper .locations .content.flex .loc .pr5 {
+        padding-right: 8%;
+    }
+    .wrapper .locations .content.flex .loc .w90 {
+        width: 80%;
+    }
+    .wrapper .locations .time.content.flex  {
+        flex-direction: row;
+    }
+    .wrapper .locations .time.content.flex .w25 {
+        width: 50%;
+    }
     .locations .w48 {
         width: 100%;
         margin: 0;
     }
-    .us.mb10 {
+    .fridge .w80 {
+        width: 90%;
+    }
+    .fridge.mt10 {
+        margin-top: 30%;
+    }
+    .fridge.mb10 {
         margin-bottom: 30%;
+    }
+    .us {
+        font-size: 4.5vw;
+    }
+    .us.mb10 {
+        margin-bottom: 15%;
+    }
+    .us.mt5 {
+        margin-top: 40%;
     }
     .us .w50 {
         width: 100%;
     }
     .us .w70, .us .w60  {
-        width: 83%;
+        width: 86%;
     }
     .us .pl20 {
         padding-left: 7%;
@@ -802,10 +882,60 @@ a {
     #social .icon {
         margin: 0 4vw; 
     }
+    .footer .content.flex {
+        display: flex;
+        flex-direction: row;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .footer .child:nth-child(1) { order: 2; width: 90%; display: block; }
+    .footer .child:nth-child(2) { order: 1; width: 40%; margin: 15% 30% 15% 30%; display: block;}
+    .footer .child:nth-child(3) { order: 3; text-align: center; width: 80%; padding: 0 10%;}
+    .footer .child:nth-child(3) .mr5 { margin: 0;}
+  
+    .footer-slogan {
+        font-size: 13vw;
+    }
+    
     .footer.mb2 {
         margin-bottom: 10%;
     }
     .fixed-footer {
         font-size: 14vw;
     }   
+    .site-info-copy-link:hover span {
+        top: 100%;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 720px) and (max-height: 420px) {
+    .header {
+        width: 17%;
+    }
+    #social h4, h3 {
+        font-size: 12vw;
+    }
+    h4 {
+        font-size: 5vw;
+    }
+    #moto {
+        font-size: 18vw;
+    }
+    #slogan {
+        font-size: 9vw;
+    }
+    .wrapper .locations .content, .content-block, .us {
+        font-size: 3vw;
+    }
+    .fixed-footer {
+        font-size: 10vw;
+    }
+    .footer-slogan {
+        font-size: 10vw;
+        line-height: 1.3;
+    }
+    .footer .child:nth-child(2) {
+        width: 26%;
+        margin: 15% 37% 15% 37%;
+    }
 }

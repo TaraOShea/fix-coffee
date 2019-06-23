@@ -18,7 +18,8 @@ scrollScope.scrollInit = function(){
 
 scrollScope.revealElement = function(){
     var scroll = window.scrollY || window.pageYOffset;
-    for(var i=0; i < scrollScope.scrollElements.length; i++){ 
+    for(var i=0; i < scrollScope.scrollElements.length; i++){
+        // console.log(scrollScope.scrollElements.length) 
         if( utils.isInViewTop(scrollScope.scrollElements[i]) ){
             TweenMax.to(scrollScope.scrollElements[i], 1.2, { opacity: 1, y: 0 })
         }
