@@ -36,7 +36,7 @@ footer, header, hgroup, menu, nav, section {
 //     width: 100%;
 // }
 body {
-    line-height: 1.6;
+    line-height: 1.5;
     font-family: $font-two;
     font-weight: 300;
     color: $second-color;
@@ -137,6 +137,9 @@ p:last-child {
 }
 .mt10 {
     margin-top: 10%;
+}
+.mt20 {
+    margin-top: 20%;
 }
 .tt-4 {
     -moz-transform: translateY(-4%); 
@@ -260,6 +263,21 @@ p:last-child {
     display: inline-block;
     vertical-align: top;
 }
+.dm {
+    display: none;
+}
+.full-bg-m {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+.full-bg-m-overlay {
+    position: absolute;
+    top: -1%;
+    right: -25%;
+    width: 60%;
+}
 h3 {
     font-size: 7vw;
     font-family: $font;
@@ -281,8 +299,12 @@ h4 {
     -o-transform: translate(-50%, 0%);
     -ms-transform: translate(-50%, 0%);
     transform: translate(-50%, 0%);
+    mix-blend-mode: difference;
 
-    z-index: 500;
+    z-index: 9999;
+}
+.header svg path {
+    mix-blend-mode: difference;
 }
 .underline {
     position: relative;
@@ -443,49 +465,71 @@ a {
 }
 #slogan-img-1 {
     position: absolute;
+    // top: 50%;
+    // -moz-transform: translateY(-50%);
+    // -webkit-transform: translateY(-50%);
+    // -o-transform: translateY(-50%);
+    // -ms-transform: translateY(-50%);
+    // transform: translateY(-50%);
+    // left: 0;
+
+    // width: 80%;
+    // height: 0;
+    // padding-bottom: 53.5%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    // z-index: 10;
+}
+#slogan-img-2 {
+    position: absolute;
+    // top: 50%;
+    // -moz-transform: translateY(-48%);
+    // -webkit-transform: translateY(-48%);
+    // -o-transform: translateY(-48%);
+    // -ms-transform: translateY(-48%);
+    // transform: translateY(-48%);
+    // right: 5%;
+    // width: 38%;
+    // height: 0;
+    // padding-bottom: 53.5%;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    // z-index: 11;
+}
+#slogan-img-3 {
+    position: absolute;
+    // top: 50%;
+    // -moz-transform: translateY(-20%);
+    // -webkit-transform: translateY(-20%);
+    // -o-transform: translateY(-20%);
+    // -ms-transform: translateY(-20%);
+    // transform: translateY(-20%);
+    // left: 3%;
+    // width: 48%;
+    // height: 0;
+    // padding-bottom: 53.5%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    // z-index: 12; 
+}
+.slogan-img img {
+    position: absolute;
     top: 50%;
     -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    left: 0;
-
-    width: 80%;
-    height: 0;
-    padding-bottom: 53.5%;
-
-    z-index: 10;
-}
-#slogan-img-2 {
-    position: absolute;
-    top: 50%;
-    -moz-transform: translateY(-48%);
-    -webkit-transform: translateY(-48%);
-    -o-transform: translateY(-48%);
-    -ms-transform: translateY(-48%);
-    transform: translateY(-48%);
-    right: 5%;
-    width: 38%;
-    height: 0;
-    padding-bottom: 53.5%;
-    z-index: 11;
-}
-#slogan-img-3 {
-    position: absolute;
-    top: 50%;
-    -moz-transform: translateY(-20%);
-    -webkit-transform: translateY(-20%);
-    -o-transform: translateY(-20%);
-    -ms-transform: translateY(-20%);
-    transform: translateY(-20%);
-    left: 3%;
-
-    width: 48%;
-    height: 0;
-    padding-bottom: 53.5%;
-
-    z-index: 12; 
 }
 //COFFEE
 .coffee-header {
@@ -542,6 +586,30 @@ a {
     margin-bottom: 5%;
     max-width: 80%;
 }
+.decaf a {
+    margin-right: 20%;
+    position: relative;
+}
+.decaf a::after {
+    content: '';
+    position: absolute;
+    bottom: -0.9vw;
+    right: -23%;
+    width: 3.4vw;
+    height: 3.4vw;
+    background: url('../assets/final_link.svg');
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+.static-img {
+    position: absolute;
+    bottom: 3%;
+    right: -4%;
+    width: 20%;
+}
+.static-img img {
+    display: block;
+}
 // FRIDGE //
 .fridge .flex {
     flex-wrap: wrap;
@@ -569,9 +637,25 @@ a {
 }
 .wrapper .locations .content {
     font-size: 1.6vw;
+    overflow: hidden;
 }
 .wrapper .locations .content p {
     margin: 0;
+}
+.wrapper .locations .loc:hover + .loc-img {
+    display: block;
+    z-index: 20;
+}
+.wrapper .locations .loc-img {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+    display: none;
+}
+.wrapper .locations .loc-img:nth-child(2){
+    right: 0%;
 }
 // us //
 .us {
@@ -610,7 +694,7 @@ a {
 .footer-slogan {
     font-size: 4vw;
     font-family:  $font;
-    line-height: 1.5;
+    line-height: 1.1;
 }
 .site-info-copy-link {
     position: relative;
@@ -680,6 +764,9 @@ a {
     .dnm {
         display: none;
     }
+    .dm {
+        display: block;
+    }
     h3 {
         font-size: 14vw;
     }
@@ -720,6 +807,9 @@ a {
     #slogan-img-2, #slogan-img-3 {
         display: none;
     }
+    #slogan .underline:after {
+        background: transparent;
+    }
     .store {
         width: 50%;
     }
@@ -756,8 +846,8 @@ a {
         padding-top: 10%;
     }
     .coffee-body .content.flex .mr5, .coffee-body .content.flex .ml5 {
-        margin-left: 2%;
-        margin-right: 2%;
+        margin-left: 0%;
+        margin-right: 0%;
     }
     .coffee-img {
         padding-left: 20%;
@@ -788,6 +878,11 @@ a {
     .coffee-body .content .mr5,  .coffee-body .content .lr5{
         margin-right: 0;
         margin-left: 0;
+    }
+    .decaf a::after  {
+        width: 6vw;
+        height: 6vw;
+        right: -50%;
     }
     .bgb:after {
         background: none;
@@ -839,6 +934,24 @@ a {
     .locations .w48 {
         width: 100%;
         margin: 0;
+    }
+    .wrapper .locations .loc:hover + .loc-img {
+        display: block;
+        z-index: 20;
+    }
+    .wrapper .locations .loc-img {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: translateY(0%);
+        z-index: 0;
+        display: block;
+    }
+    .wrapper .locations .loc-img img {
+        display: block;
+    }
+    .wrapper .locations .loc-img:nth-child(2){
+        right: auto;
     }
     .fridge .w80 {
         width: 90%;
