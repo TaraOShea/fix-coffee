@@ -417,7 +417,7 @@ a {
     cursor: pointer;
     position: relative;
     display: block;
-    z-index: 500;
+    z-index: 9999;
 }
 
 // STORES //
@@ -532,6 +532,9 @@ a {
     transform: translateY(-50%);
 }
 //COFFEE
+.coffee {
+    overflow: hidden;
+}
 .coffee-header {
     position: relative;
     padding-top: 12%;
@@ -668,6 +671,9 @@ a {
     margin-bottom: 2vw;
 }
 //SOCIAL 
+.social .content.flex {
+    z-index: 9999;
+}
 #social {
     padding: 5vw;
     border: 3px solid #F7C9E7;

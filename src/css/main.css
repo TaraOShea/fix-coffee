@@ -454,7 +454,7 @@ a {
   cursor: pointer;
   position: relative;
   display: block;
-  z-index: 500;
+  z-index: 9999;
 }
 
 .wrapper .content.stores {
@@ -539,6 +539,10 @@ a {
   -o-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.coffee {
+  overflow: hidden;
 }
 
 .coffee-header {
@@ -688,6 +692,10 @@ a {
   font-size: 4.5vw;
   line-height: 1;
   margin-bottom: 2vw;
+}
+
+.social .content.flex {
+  z-index: 9999;
 }
 
 #social {
