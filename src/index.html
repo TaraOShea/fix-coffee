@@ -15,7 +15,7 @@
         <!--[if lt IE 9]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header class="header">
+        <header id="header" class="header">
             <h1 class="title">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1080 600" style="enable-background:new 0 0 1080 600;" xml:space="preserve">
                     <style type="text/css">
@@ -200,12 +200,13 @@
                     <img src="assets/spider.jpg" />
                 </div>
             </div>
-            <div id="fix161"></div>
-            <div id="fix126"></div>
+
             <div class="locations mt10">
+
                 <h3 class="tc mb5">locations</h3>
                 <div class="content flex">
                     <div class="w48 invert mr2 tl loc">
+                        <div id="fix126"></div>
                         <div class="loc pl10 pt5 pb10 tl content flex">
                             <div class="w7 pr5 pt5 nolink">
                                 <a href="https://www.google.com/maps/place/Fix+Coffee/@51.52338,-0.093349,15z/data=!4m2!3m1!1s0x0:0x9287eb294f638b51?sa=X&amp;ved=2ahUKEwiM9oOZuO7iAhWDs3EKHRJyCVYQ_BIwF3oECA8QCA" target="blank">
@@ -245,6 +246,7 @@
                         <img src="assets/126.jpg" />
                     </div>
                     <div class="w48 invert ml2 tl loc">
+                        <div id="fix161"></div>
                         <div class="loc pl10 pt5 pb10 tl content flex">
                             <div class="w7 pr5 pt5 inline nolink">
                                 <img src="assets/location.svg" />
@@ -352,8 +354,8 @@
         </div>
 
         <div id="fixed-footer" class="fixed-footer">
-            <a id="loc-one" class="loc" href="#fix126">126</a>
-            <a id="loc-one" class="loc" href="#fix161">161</a>
+            <a id="loc-one" class="loc" data-target="fix126" href="#fix126">126</a>
+            <a id="loc-one" class="loc" data-target="fix161" href="#fix161">161</a>
         </div>
         <script src="js/TweenMax.min.js" async defer></script>
         

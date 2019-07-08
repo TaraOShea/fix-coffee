@@ -33,7 +33,7 @@ motoScope.tiltMoto = function(event) {
 }
 
 motoScope.changeMotoText = function(autoPlay) {
-    if(autoPlay && motoScope.animate){
+    if(autoPlay){
        setTimeout(function() {
             motoScope.i = motoScope.loop*20;
             motoScope.changeMotoText(true);
@@ -41,7 +41,7 @@ motoScope.changeMotoText = function(autoPlay) {
        }, 400); 
     }
 
-    if(motoScope.i !==0 && motoScope.i % 20 === 0){
+    if(motoScope.i !==0 && motoScope.i % 30 === 0){
         motoScope.moto.innerHTML = motoScope.randomElement(motoScope.motos);
     }
     motoScope.i++;
